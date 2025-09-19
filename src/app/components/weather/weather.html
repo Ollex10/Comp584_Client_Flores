@@ -1,0 +1,13 @@
+<h2>Weather Forecast</h2>
+
+<div *ngIf="forecasts.length; else errorBlock">
+  <ul>
+    <li *ngFor="let f of forecasts">
+      {{ f.date }} - {{ f.temperatureC }}°C - {{ f.summary }}
+    </li>
+  </ul>
+</div>
+
+<ng-template #errorBlock>
+  <p>{{ error }}</p>
+</ng-template>
