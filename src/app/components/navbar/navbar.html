@@ -1,7 +1,12 @@
-<nav class="navbar">
-  <ul>
-    <li><a routerLink="/weather" routerLinkActive="active">Weather</a></li>
-    <li><a routerLink="/cities" routerLinkActive="active">Cities</a></li>
-    <li><a routerLink="/countries" routerLinkActive="active">Countries</a></li>
-  </ul>
-</nav>
+
+ <header>
+  <mat-toolbar color="primary">
+   <button mat-icon-button [routerLink] = "['/']" >
+      <mat-icon>home</mat-icon>
+      </button>
+    <a mat-flat-button color = "primary" [routerLink]="['/weather']" >Weather</a>
+    <a mat-flat-button color="primary" [routerLink]="['/cities']">Cities</a>
+    <a mat-flat-button color = "primary" [routerLink]="['/countries']" >Countries</a>
+    </mat-toolbar>
+  </header>
+
