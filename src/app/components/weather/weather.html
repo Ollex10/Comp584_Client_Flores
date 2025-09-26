@@ -1,13 +1,19 @@
-<h2>Weather Forecast</h2>
+<table> 
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Temperature (C)</th>
+      <th>Temperature (F)</th>
+      <th>Summary</th>
+    </tr>
+    </thead>
+  <tbody>
+  <tr *ngFor="let weather of forecast; let i = index">
+    <td>{{ weather.date }}</td>
+    <td>{{ weather.temperatureC }}</td>
+    <td>{{ weather.temperatureF }}</td>
+    <td>{{ weather.summary }}</td>
+  </tr>
+</tbody>
 
-<div *ngIf="forecasts.length; else errorBlock">
-  <ul>
-    <li *ngFor="let f of forecasts">
-      {{ f.date }} - {{ f.temperatureC }}°C - {{ f.summary }}
-    </li>
-  </ul>
-</div>
-
-<ng-template #errorBlock>
-  <p>{{ error }}</p>
-</ng-template>
+</table>
