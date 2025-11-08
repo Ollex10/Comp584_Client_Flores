@@ -1,3 +1,4 @@
+
 <table> 
   <thead>
     <tr>
@@ -8,12 +9,14 @@
     </tr>
     </thead>
   <tbody>
-  <tr *ngFor="let weather of forecast; let i = index">
+    @for(weather of (forecast$ | async); track $index){
+  <tr>
     <td>{{ weather.date }}</td>
     <td>{{ weather.temperatureC }}</td>
     <td>{{ weather.temperatureF }}</td>
     <td>{{ weather.summary }}</td>
   </tr>
+}
 </tbody>
 
 </table>
