@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink } from "@angular/router";
 import { RouterOutlet } from '@angular/router';
+import { AuthService } from '../../auth/auth-service';
 
 @Component({
   selector: 'app-navbar',
@@ -17,5 +18,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './navbar.css'
 })
 export class NavBar {
-
+  constructor(public authService: AuthService) {}
 }

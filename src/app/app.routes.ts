@@ -4,11 +4,13 @@ import { Home } from './home/home';
 import { Cities } from './components/cities/cities';
 import { Countries } from './components/countries/countries';
 import { CountryPopulation } from './country-population/country-population';
+import { Login } from './auth/login';
 
 export const routes: Routes = [
   { path: '', component: Home, pathMatch: 'full' },
   { path: 'weather', component: Weather },
   { path: 'cities', component: Cities },
   { path: 'countries', component: Countries },
+  {path: 'login', component: Login},
   {path: 'country-population/:id', component: CountryPopulation}
 ];
